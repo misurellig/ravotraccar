@@ -68,3 +68,7 @@ variable "instance_type" {
 variable "db_data_size" {
   type = number
 }
+
+variable "additional_tags" {
+  type = map(any)
+}

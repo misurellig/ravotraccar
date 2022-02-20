@@ -8,4 +8,9 @@ sudo amazon-linux-extras install epel -y
 sudo sed -i 's/RPM-GPG-KEY-mysql/RPM-GPG-KEY-mysql-2022/g' /etc/yum.repos.d/mysql-community.repo
 sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
 sudo yum install -y mysql-community-client
-
+# noip
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install -y noip
+sudo noip2 -C
+sudo systemctl enable noip.service
+sudo systemctl start noip.service
